@@ -246,11 +246,11 @@
           </div>
 
           <div class="form-group">
-             
-            <label for="imei"><span><button class="open-popup">?</button></span>IMEI</label>
-            <input type="text" id="imei" name="imei" placeholder="IMEI" />
+           
+            <label for="imei"><span>IMEI: 
+            <button class="open-popup" onclick="anularSubmit(event)">?</button></span></label>
+            <input type="text" id="imei" name="imei" placeholder="IMEI" pattern="[0-9]{15,16}" title="El IMEI debe tener 15 o 16 dígitos numéricos" />
           </div>
-
           <div class="form-group">
             <label for="message">Mensaje</label>
             <textarea id="message" name="message" placeholder="Describe tu situación y cualquier detalle importante..."></textarea>
@@ -374,6 +374,11 @@
                 }, 5000);
             });
         });
+      function anularSubmit(event) {
+  event.preventDefault(); // Evita que se envíe el formulario
+  // Aquí puedes agregar tu lógica personalizada cuando se haga clic en el botón
+  console.log("El evento submit fue cancelado.");
+}
     </script>
   <!-- FOOTER -->
   <footer>
@@ -411,5 +416,6 @@
 </body>
   <script src="script.js"></script>
 </html>
+
 
 
