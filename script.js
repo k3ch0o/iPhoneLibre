@@ -52,7 +52,7 @@ document.getElementById('contact').addEventListener('submit', function(e) {
   let mensaje = `MODELO: ${modelo}\n`;
     mensaje += `PAIS: ${pais}\n`;
     mensaje += `OPERADOR: ${operador}\n`;
-  mensaje += `IMEI: ${imei}`;
+  mensaje += `IMEI: ${imei}\n`;
   mensaje += `MENSAJE: ${mensaje}`;
   
   // Mostrar mensaje en un modal más elegante
