@@ -46,7 +46,7 @@ document.getElementById('contact').addEventListener('submit', function(e) {
   const pais = document.getElementById('pais').value;
   const operador = document.getElementById('operador').value;
   const imei = document.getElementById('imei').value;
-  const mensajeX = document.getElementById('mensaje').value;
+  const mensajeX = document.getElementById('message').value;
   
   
   let mensaje = `MODELO: ${modelo}\n`;
