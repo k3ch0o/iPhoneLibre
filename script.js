@@ -1,3 +1,5 @@
+
+
 const operadoresPorPais = {
     MX: [
       "Telcel", "AT&T México", "Movistar México", "Unefon", "Virgin Mobile México",
@@ -17,7 +19,7 @@ const operadoresPorPais = {
       "Fizz Mobile", "Eastlink Wireless", "SaskTel", "TbayTel", "SSi Canada",
       "Iristel", "Sogetel Mobilité", "K-Net Mobile"
     ],
-OT: [
+  OT: [
       "Otro"
     ]
   };
