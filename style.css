@@ -42,7 +42,7 @@
         
         .logo {
           vertical-align: text-top;
-            font-size: 35px;
+            font-size: 25px;
             font-weight: 700;
             color: var(--primary);
             
@@ -316,7 +316,7 @@
             }
             
             .hero h1 {
-                font-size: 36px;
+                font-size: 26px;
             }
             
             .hero p {
