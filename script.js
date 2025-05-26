@@ -67,28 +67,6 @@
             canvas.height = window.innerHeight;
         });
 
-        // Form submission
-        function submitForm(event) {
-            event.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const model = document.getElementById('model').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would normally send the data to a server
-            // For this example, we'll just show an alert
-            alert(`Gracias ${name}, hemos recibido tu solicitud para liberar tu ${model}. Nos pondremos en contacto contigo pronto en ${email}.`);
-            
-            // Reset form
-            document.getElementById('contact-form').reset();
-            
-            // Scroll to top
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
-
         // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -110,9 +88,9 @@ document.getElementById('contact').addEventListener('submit', function(e) {
   
   
   let mensaje = `Nombre: ${nombre}\n`;
-  mensaje += `IMEI: ${imei}\n`;
-  mensaje += `Servicio: ${servicio}\n`;
-  mensaje += `Mensaje: ${mensajeX}`;  
+ if (imei.trim().length > 0) { mensaje += `IMEI: ${imei}\n`;}
+ if (servicio.trim().lenght > 0){ mensaje += `Servicio: ${servicio}\n`};
+ if (mensaje.trim().lenght > 0){ mensaje += `Mensaje: ${mensajeX}`;} 
   
   
   // Mostrar mensaje en un modal más elegante
