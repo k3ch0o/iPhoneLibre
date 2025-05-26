@@ -1,422 +1,293 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liberación Profesional de iPhone - Expertos en Desbloqueo</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhoneLibre - Liberación profesional de iPhone</title>    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+  
 <body>
+    <!-- Efecto de partículas -->
+    <canvas class="particles" id="particles"></canvas>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">
-          <span><img style="max-height:25px;" src="https://i.imgur.com/lsN43du.png"></span>
-          iPhoneLibre
+    <!-- Header -->
+    <header>
+        <div class="logo"><span><img src="https://i.imgur.com/dB4KhYu.png" style="max-width:30px;"></span>iPhone<span>Libre</span></div>
+        <nav>
+            <ul>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#how-it-works">Cómo funciona</a></li>
+                <li><a href="#pricing">Precios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="cta-button" onclick="document.getElementById('contact-form').scrollIntoView({behavior: 'smooth'})">Liberar ahora</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Libera tu <span>iPhone</span> en minutos</h1>
+            <p>Servicio profesional de liberación para todos los modelos de iPhone. Compatibilidad garantizada con cualquier operador mundial.</p>
+            <button class="cta-button" onclick="document.getElementById('contact-form').scrollIntoView({behavior: 'smooth'})">Iniciar liberación</button>
         </div>
-        <ul class="nav-links">
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#about">Nosotros</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1>Liberación Profesional de iPhone</h1>
-      <p>Desbloquea tu iPhone de cualquier operador de forma rápida, segura y garantizada. Trabajamos con todos los modelos y versiones.</p>
-      <a href="#contact" class="btn">Contáctanos Ahora</a>
-    </div>
-  </section>
-
-  <!-- SERVICIOS -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Nuestros Servicios</h2>
-        <p>Ofrecemos soluciones completas para la liberación de tu iPhone, sin importar el modelo o operador.</p>
-      </div>
-      <div class="service-grid">
-        <!-- Servicio 1 -->
-        <div class="service-card">
-          <div class="service-img">
-            <img src="https://i.imgur.com/ov5ARNd.png" alt="Liberación iPhone">
-          </div>
-          <div class="service-content">
-            <h3>Liberación de fábrica</h3>
-            <p>Compatible con todos los modelos.</p>
-            <p>Desbloqueo permanente de tu iPhone para que funcione con cualquier operador a nivel mundial.</p>
-            <a href="#contact" class="btn">Solicitar</a>
-          </div>
+        <div class="hero-image">
+            <img src="https://i.imgur.com/RMXnLtN.png" alt="iPhone" class="iphone-img">
         </div>
+    </section>
 
-        <!-- Servicio 2 -->
-        <div class="service-card">
-          <div class="service-img">
-            <img src="https://i.imgur.com/mK6yEpx.png" alt="Reparación iPhone">
-          </div>
-          <div class="service-content">
-            <h3>Liberación con RSIM</h3>
-            <p>Compatible del iPhone 5s al 11 Pro Max</p>
-            <p>Servicio premium con garantía. Incluye soporte técnico posterior y asesoramiento personalizado.</p>
-            <p style="color:salmon;">¡Listo en Minutos!</p>
-            <a href="#contact" class="btn">Solicitar</a>
-          </div>
+    <!-- Servicios -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>Nuestros Servicios</h2>
+            <p>Ofrecemos soluciones completas para la liberación de tu iPhone con las mejores tecnologías del mercado.</p>
         </div>
-
-        <!-- Servicio 3 -->
-        <div class="service-card">
-          <div class="service-img">
-            <img src="https://i.imgur.com/aqrvLXs.png" alt="Consultoría iPhone">
-          </div>
-          <div class="service-content">
-            <h3>Liberación con QPE</h3>
-            <p>Compatible del iPhone 12 al 16 Pro Max</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://i.imgur.com/ov5ARNd.png" alt="Liberación por IMEI" class="service-banner">
+              <div class="service-content">
+                <h3>Liberación por IMEI</h3>
+                <h4>Compatible con todos los modelos.</h4>
+                <p>Liberación permanente vía IMEI compatible con todas las versiones de iOS y la mayoría de operadores del mundo.</p>
+                <a href="#contact" class="service-link">Solicitar ahora →</a>
+              </div>
+            </div>
+              
+              
+            <div class="service-card">
+               <img src="https://i.imgur.com/mK6yEpx.png" alt="Liberación con RSIM" class="service-banner">
+                <div class="service-content">
+                <h3>Liberación con RSIM</h3>
+              <h4>Compatible del iPhone 5s al 11 Pro Max</h4>
+                <p>Preparamos tu iPhone para que funcione perfectamente con cualquier operador que elijas.</p>
+              <p style="color:salmon;">¡Listo en Minutos!</p>
+                  <a href="#contact" class="service-link">Solicitar ahora →</a>
+              </div>
+            </div>
+          
+          
+            <div class="service-card">
+               <img src="https://i.imgur.com/aqrvLXs.png" alt="Liberación con QPE" class="service-banner">
+                <div class="service-content">
+               <h3>Liberación con QPE</h3>
+            <h4>Compatible del iPhone 12 al 16 Pro Max</h4>
             <p>Ofrecemos el 100% de estabilidad en la señal, funciona en dispositivos con ranura para chip físico</p>
             <p style="color:salmon;">¡Listo en Minutos!</p>
-            <a href="#contact" class="btn">Solicitar</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE NOSOTROS -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-content">
-        <div class="about-text">
-          <h2>Expertos en Liberación de iPhone</h2>
-          <p>Con más de 10 años de experiencia en el mercado, hemos ayudado a miles de clientes a liberar sus dispositivos iPhone de manera segura y confiable.</p>
-          <p>Utilizamos métodos oficiales y herramientas profesionales para garantizar una liberación segura sin afectar el funcionamiento de tu dispositivo.</p>
-          <p>Trabajamos con todos los modelos, desde el iPhone 4 hasta el iPhone 16 Pro Max y 16e, y con todas las versiones de iOS.</p>
-          <a href="#contact" class="btn">Contáctanos</a>
-        </div>
-        <div class="about-image">
-          <img src="https://i.imgur.com/EnnHa3e.png" alt="Equipo de expertos en iPhone">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- UBICACIÓN -->
-  <section class="location-section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Nuestra Ubicación</h2>
-        <p>Visítanos en nuestro local o contáctanos para coordinar tu servicio</p>
-      </div>
-      <div class="location-content">
-        <div class="location-info">
-          <div class="logo">
-            <span><img style="max-height:25px;" src="https://i.imgur.com/lsN43du.png"></span>
-            iPhoneLibre
-          </div>
-          <p><i class="fas fa-map-marker-alt"></i> Calle Manzanas #790</p>
-          <p><i class="fas fa-city"></i> Barrio Delicias, Cuauhtémoc Chihuahua</p>
-          <p><i class="fas fa-clock"></i> Horario: Lunes a Sábado 9:00am - 9:00pm</p>
-          <p><i class="fas fa-phone"></i> Teléfono: +52 (635) 106 2284</p>
-          <p><i class="fas fa-envelope"></i> Email: k3ch0o@gmail.com</p>
-          <div class="location-buttons">
-            <a href="tel:+526351062284" class="btn secondary">Llamar ahora</a>
-          </div>
-        </div>
-        <div class="location-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d371.8295420584449!2d-106.87722375993114!3d28.403552408038742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d28.40360490118072!2d-106.8772158029785!5e0!3m2!1ses!2smx!4v1748022138423!5m2!1ses!2smx"
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TÉCNICO -->
-  <section class="tech-card">
-    <div class="tech-photo-frame">
-      <img src="https://i.imgur.com/Vqcqk4v.png" alt="Técnico especialista en iPhone" class="tech-photo">
-    </div>
-    <div class="logo">
-      <span><img style="max-height:25px;" src="https://i.imgur.com/lsN43du.png"></span>
-      iPhoneLibre
-    </div>
-    <div class="tech-info">
-      <h3>Ing. Sergio A. Carrasco Chávez</h3>
-      <p class="tech-specialty">Especialista en Liberación de iPhone</p>
-      <div class="tech-details">
-        <p><i class="fas fa-award"></i> 13 años de experiencia</p>
-        <p><i class="fas fa-mobile-alt"></i> +1500 dispositivos liberados</p>
-        <p><i class="fas fa-certificate"></i> Desarrollador Apple</p>
-      </div>
-      <div class="tech-social">
-        <a href="https://wa.me/526351062284?text=¡Hola!, vengo desde iPhoneLibre..."><i class="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com/iphonelibre"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/iphonelibrecuauh"><i class="fab fa-facebook"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contáctanos</h2>
-        <p>Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.</p>
-      </div>
-      <div class="contact-form">
-        <form>
-          <div class="form-group">
-            <div class="logo">
-              <span><img style="max-height:25px;" src="https://i.imgur.com/lsN43du.png"></span>
-              iPhoneLibre
+                  <a href="#contact" class="service-link">Solicitar ahora →</a>
             </div>
-            <label for="model">Modelo de iPhone</label>
-            <select id="model" name="model" required>
-             <option value="iPhone">iPhone</option>
-<option value="iPhone 3G">iPhone 3G</option>
-<option value="iPhone 3GS">iPhone 3GS</option>
-<option value="iPhone 4">iPhone 4</option>
-<option value="iPhone 4s">iPhone 4s</option>
-<option value="iPhone 5">iPhone 5</option>
-<option value="iPhone 5c">iPhone 5c</option>
-<option value="iPhone 5s">iPhone 5s</option>
-<option value="iPhone 6">iPhone 6</option>
-<option value="iPhone 6 Plus">iPhone 6 Plus</option>
-<option value="iPhone 6s">iPhone 6s</option>
-<option value="iPhone 6s Plus">iPhone 6s Plus</option>
-<option value="iPhone SE (1ra generación)">iPhone SE (1ra generación)</option>
-<option value="iPhone 7">iPhone 7</option>
-<option value="iPhone 7 Plus">iPhone 7 Plus</option>
-<option value="iPhone 8">iPhone 8</option>
-<option value="iPhone 8 Plus">iPhone 8 Plus</option>
-<option value="iPhone X">iPhone X</option>
-<option value="iPhone XR">iPhone XR</option>
-<option value="iPhone XS">iPhone XS</option>
-<option value="iPhone XS Max">iPhone XS Max</option>
-<option value="iPhone 11">iPhone 11</option>
-<option value="iPhone 11 Pro">iPhone 11 Pro</option>
-<option value="iPhone 11 Pro Max">iPhone 11 Pro Max</option>
-<option value="iPhone SE (2da generación)">iPhone SE (2da generación)</option>
-<option value="iPhone 12">iPhone 12</option>
-<option value="iPhone 12 mini">iPhone 12 mini</option>
-<option value="iPhone 12 Pro">iPhone 12 Pro</option>
-<option value="iPhone 12 Pro Max">iPhone 12 Pro Max</option>
-<option value="iPhone 13">iPhone 13</option>
-<option value="iPhone 13 mini">iPhone 13 mini</option>
-<option value="iPhone 13 Pro">iPhone 13 Pro</option>
-<option value="iPhone 13 Pro Max">iPhone 13 Pro Max</option>
-<option value="iPhone SE (3ra generación)">iPhone SE (3ra generación)</option>
-<option value="iPhone 14">iPhone 14</option>
-<option value="iPhone 14 Plus">iPhone 14 Plus</option>
-<option value="iPhone 14 Pro">iPhone 14 Pro</option>
-<option value="iPhone 14 Pro Max">iPhone 14 Pro Max</option>
-<option value="iPhone 15">iPhone 15</option>
-<option value="iPhone 15 Plus">iPhone 15 Plus</option>
-<option value="iPhone 15 Pro">iPhone 15 Pro</option>
-<option value="iPhone 15 Pro Max">iPhone 15 Pro Max</option>
-<option value="iPhone 16">iPhone 16</option>
-<option value="iPhone 16 Plus">iPhone 16 Plus</option>
-<option value="iPhone 16 Pro">iPhone 16 Pro</option>
-<option value="iPhone 16 Pro Max">iPhone 16 Pro Max</option>
-
-            </select>
           </div>
+          
+        </div>
+    </section>
 
-          <div class="form-group">
-            <label for="pais">País de origen</label>
-            <select id="pais" name="pais" onchange="actualizarOperadores()" required>
-              <option value="">Selecciona el país de origen</option>
-              <option value="MX">México</option>
-              <option value="US">Estados Unidos</option>
-              <option value="CA">Canadá</option>
-              <option value="OT">Otro país</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="operador">Operador / Compañía</label>
-            <select id="operador" name="operador" required>
-              <option value="">Selecciona el operador / compañía</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-           
-            <label for="imei"><span>IMEI: 
-            <button class="open-popup" onclick="anularSubmit(event)">?</button></span></label>
-            <input type="text" id="imei" name="imei" placeholder="IMEI" pattern="[0-9]{15,16}" title="El IMEI debe tener 15 o 16 dígitos numéricos" />
-          </div>
-          <div class="form-group">
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" placeholder="Describe tu situación y cualquier detalle importante..."></textarea>
-          </div>
-
-          <button type="submit" class="btn">Enviar por WhatsApp</button>
-        </form>
-      </div>
-    </div>
-  </section>
-<div class="popup" id="popup">
-        <div class="popup-content">
-            <span class="close-btn">&times;</span>
-            <h3>¿Donde obtengo el IMEI?</h3>
-            
-            <div class="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item">
-                        <img src="https://i.imgur.com/BqIpwh2.png" alt="Imagen 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.imgur.com/oDbHBfM.png" alt="Imagen 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.imgur.com/I3p5XHc.png" alt="Imagen 3">
-                    </div>
-                </div>
-                
-                <button class="carousel-control prev">&#10094;</button>
-                <button class="carousel-control next">&#10095;</button>
-                
-                <div class="carousel-indicators">
-                    <span class="indicator active" data-slide-to="0"></span>
-                    <span class="indicator" data-slide-to="1"></span>
-                    <span class="indicator" data-slide-to="2"></span>
-                </div>
+    <!-- Cómo funciona -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-title">
+            <h2>Cómo funciona</h2>
+            <p>Nuestro proceso de liberación es rápido, seguro y sencillo. Sigue estos pasos:</p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Envíanos tu IMEI</h3>
+                <p>Proporciona el número IMEI de tu iPhone (lo encuentras en Ajustes > General > Información).</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Realizamos tu cotización</h3>
+                <p>Elige el servicio que más te convenga de nuestra cotización.</p>
+            </div>
+          <div class="step">
+                <div class="step-number">3</div>
+                <h3>Agendamos cita y forma de pago</h3>
+                <p>Si decides algún método de fábrica los tiempos y precios pueden variar, para RSIM o QPE tenemos citas el mismo día.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>¡Disfruta tu iPhone libre!</h3>
+                <p>Recibirás un mensaje de WhatsApp de confirmación cuando tu iPhone esté listo para usar con cualquier operador.</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const popup = document.getElementById('popup');
-            const openBtn = document.querySelector('.open-popup');
-            const closeBtn = document.querySelector('.close-btn');
-            const carouselInner = document.querySelector('.carousel-inner');
-            const items = document.querySelectorAll('.carousel-item');
-            const prevBtn = document.querySelector('.carousel-control.prev');
-            const nextBtn = document.querySelector('.carousel-control.next');
-            const indicators = document.querySelectorAll('.indicator');
-            
-            let currentIndex = 0;
-            const totalItems = items.length;
-            
-            // Abrir popup
-            openBtn.addEventListener('click', function() {
-                popup.style.display = 'flex';
-                resetCarousel();
-            });
-            
-            // Cerrar popup
-            closeBtn.addEventListener('click', function() {
-                popup.style.display = 'none';
-            });
-            
-            // Cerrar al hacer clic fuera del contenido
-            popup.addEventListener('click', function(e) {
-                if (e.target === popup) {
-                    popup.style.display = 'none';
-                }
-            });
-            
-            // Navegación del carrusel
-            function updateCarousel() {
-                carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-                
-                // Actualizar indicadores
-                indicators.forEach((indicator, index) => {
-                    indicator.classList.toggle('active', index === currentIndex);
-                });
-            }
-            
-            function resetCarousel() {
-                currentIndex = 0;
-                updateCarousel();
-            }
-            
-            prevBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-                updateCarousel();
-            });
-            
-            nextBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex + 1) % totalItems;
-                updateCarousel();
-            });
-            
-            // Navegación por indicadores
-            indicators.forEach(indicator => {
-                indicator.addEventListener('click', function() {
-                    currentIndex = parseInt(this.getAttribute('data-slide-to'));
-                    updateCarousel();
-                });
-            });
-            
-            // Opcional: Auto-avance cada 5 segundos
-            let slideInterval = setInterval(() => {
-                currentIndex = (currentIndex + 1) % totalItems;
-                updateCarousel();
-            }, 5000);
-            
-            // Pausar auto-avance al interactuar
-            carouselInner.addEventListener('mouseenter', () => {
-                clearInterval(slideInterval);
-            });
-            
-            carouselInner.addEventListener('mouseleave', () => {
-                slideInterval = setInterval(() => {
-                    currentIndex = (currentIndex + 1) % totalItems;
-                    updateCarousel();
-                }, 15000);
-            });
-        });
-      function anularSubmit(event) {
-  event.preventDefault(); // Evita que se envíe el formulario
-  // Aquí puedes agregar tu lógica personalizada cuando se haga clic en el botón
-  console.log("El evento submit fue cancelado.");
-}
-    </script>
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>iPhoneLibre</h3>
-          <p>Líderes en liberación de dispositivos Apple con los más altos estándares de calidad y servicio al cliente.</p>
+    <!-- Precios -->
+    <section class="pricing" id="pricing">
+        <div class="section-title">
+            <h2>Nuestros Precios</h2>
+            <p>Precios accesibles para todos los modelos y versiones de iPhone.</p>
         </div>
-        <div class="footer-column">
-          <h3>Servicios</h3>
-          <ul>
-            <li><a href="#">Liberación de iPhone</a></li>
-            <li><a href="#">Consultoría</a></li>
-            <li><a href="#">Soporte Técnico</a></li>
-            <li><a href="#">Garantías</a></li>
-          </ul>
+        <div class="pricing-grid">
+            
+          <div class="pricing-card">
+                <h3>Liberación con RSIM</h3>
+                <div class="price">$400</div>
+                <ul class="pricing-features">
+                    
+                    <li>Compatible del iPhone 5s al 11 Pro Max</li>
+                    <li>Tiempo de espera: 5 a 10 Minutos</li>
+                    <li>Garantía de 6 meses</li>
+                </ul>
+                <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})
+document.getElementById('servicio').value='RSIM';">Seleccionar</button>
+            </div>
+          
+            <div class="pricing-card popular">
+                <div class="popular-tag">RECOMENDADO</div>
+                <h3>Liberación QPE (RSIM+eSIM)</h3>
+                <div class="price">$800</div>
+                <ul class="pricing-features">
+                    <li>Compatible del iPhone 12 al 16 Pro Max (Sim físico)</li>
+                    <li>Soporte prioritario</li>
+                    <li>Tiempo de espera: 15 a 40 Minutos</li>
+                    <li>Garantía de 6 meses</li>
+                </ul>
+                <button class="cta-button" onclick="                            document.getElementById('contact').scrollIntoView({behavior: 'smooth'});    document.getElementById('servicio').value='QPE';">Seleccionar</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Liberación por IMEI</h3>
+                <div class="price">$400 <span> (en delante)</span></div>
+                <ul class="pricing-features">
+                    <li>Liberación de raíz</li>
+                    <li>Soporte 24/7</li>
+                    <li>Tiempo de espera: 15 minutos o más</li>
+                    <li>Garantía de por vida</li>
+                    <li>Servicio remoto</li>
+                </ul>
+                <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+document.getElementById('servicio').value='IMEI';">Seleccionar</button>
+            </div>
         </div>
-        <div class="footer-column">
-          <h3>Contacto</h3>
-          <ul>
-            <li>k3ch0o@gmail.com</li>
-            <li>+52 (635) 106-2284</li>
-            <li>Lun-Vie: 8am - 9pm</li>
-            <li>Sáb: 9am - 9pm</li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2025 iPhoneLibre. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
+    </section>
 
+    <!-- Contacto -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Contacto</h2>
+            <p>¿Tienes dudas? Escríbenos y te responderemos en menos de 24 horas.</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Dirección</h3>
+                        <p>Barrio Delicias, Calle Manzanas #790</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Teléfono</h3>
+                        <p><a href="tel:+526351062284">+52 (635) 106 22 84</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p><a href="mailto:k3ch0o@gmail.com">k3ch0o@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3>Horario</h3>
+                        <p>Lunes a Viernes: 8am - 9pm<br>Sábados: 9am - 9pm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contact">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imei">IMEI:</label>
+                        <input type="text" id="imei">
+                    </div>
+                  <div class="form-group">
+                        <label for="servicio">Servicio:</label>
+                    <select id="servicio" required>
+                      <option value="RSIM">Liberación por RSIM ($400)</option>
+                      <option value="QPE">Liberación por QPE ($800)</option>
+                      <option value="IMEI">Liberación por IMEI (Fábrica)</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" placeholder="Comentarios adicionales aqui..."></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>¿Listo para liberar tu iPhone?</h2>
+            <p>Nuestro proceso es rápido, seguro y garantizado. Obtén la libertad de usar tu iPhone con cualquier operador en cualquier parte del mundo.</p>
+            <button class="cta-button white" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Liberar ahora</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>iPhoneLibre</h3>
+                <p>El servicio de liberación de iPhone más confiable y rápido del mercado.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/iphonelibrecuauh"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.wa.com/+526351062284?text=¡Hola!%20vengo%20desde%20iPhoneLibre"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#services">Liberación por IMEI</a></li>
+                    <li><a href="#services">Liberación por RSIM</a></li>
+                    <li><a href="#services">Liberación por QPE</a></li>
+                    <li><a href="#services">Soporte técnico</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="#how-it-works">Preguntas frecuentes</a></li>
+                    <li><a href="#how-it-works">Guías de liberación</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#contact">Soporte</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="mailto:k3ch0o@gmail.com">k3ch0o@gmail.com</a></li>
+                    <li><a href="tel:+525512345678">+52 (635) 106 22 84</a></li>
+                    <li><a href="#contact">Chat vía whatsapp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 iPhoneLibre. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para efecto de partículas -->
+    <script src="script.js"></script>
 </body>
-  <script src="script.js"></script>
+  
 </html>
-
-
-
-
