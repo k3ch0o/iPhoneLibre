@@ -1,651 +1,232 @@
- :root {
-            --primary: #0071e3; /* Azul Apple */
-            --secondary: #34c759; /* Verde Apple */
-            --light: #ffffff;
-            --dark: #1d1d1f;
-            --gray: #86868b;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        /* Efecto de partículas tecnológicas */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.3;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem 5%;
-            position: fixed;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .logo span {
-            color: var(--secondary);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 2rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        nav ul li a:hover {
-            color: var(--primary);
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--primary);
-            transition: width 0.3s;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        .cta-button {
-            background-color: var(--primary);
-            color: var(--light);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-button:hover {
-            background-color: #0062c4;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 113, 227, 0.3);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 0 5%;
-            padding-top: 100px;
-        }
-
-        .hero-content {
-            flex: 1;
-            padding-right: 5rem;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero h1 span {
-            color: var(--primary);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-            max-width: 600px;
-        }
-
-        .hero-image {
-            flex: 1;
-            position: relative;
-        }
-
-        .iphone-img {
-            width: 80%;
-            max-width: 300px;
-            animation: float 6s ease-in-out infinite;
-            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.1));
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-
-         /* Servicios */
-        .services {
-            padding: 8rem 5%;
-            background-color: #f5f5f7;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-title p {
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background-color: var(--light);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-banner {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .service-content {
-            padding: 2rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .service-card p {
-            color: var(--gray);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-link {
-            display: inline-block;
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .service-link:hover {
-            color: #0062c4;
-        }
-
-        /* Cómo funciona */
-        .how-it-works {
-            padding: 8rem 5%;
-            background-color: var(--light);
-        }
-
-        .steps {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .step {
-            flex: 1;
-            min-width: 250px;
-            margin: 1rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .step:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 30px;
-            left: 50%;
-            width: calc(100% - 60px);
-            height: 2px;
-            background-color: var(--primary);
-            opacity: 0.3;
-            z-index: 0;
-        }
-
-        .step h3 {
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .step p {
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        /* Precios */
-        .pricing {
-            padding: 8rem 5%;
-            background-color: #f5f5f7;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .pricing-card {
-            background-color: var(--light);
-            border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .pricing-card.popular {
-            border: 2px solid var(--primary);
-            position: relative;
-        }
-
-        .popular-tag {
-            position: absolute;
-            top: -15px;
-            right: 20px;
-            background-color: var(--primary);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .price {
-            font-size: 3rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin: 1rem 0;
-        }
-
-        .price span {
-            font-size: 1rem;
-            color: var(--gray);
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin: 2rem 0;
-        }
-
-        .pricing-features li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            color: var(--gray);
-        }
-
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-
-        /* Contacto */
-        .contact {
-            padding: 8rem 5%;
-            background-color: var(--light);
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 2rem;
-        }
-
-        .contact-icon {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-right: 1rem;
-            margin-top: 0.3rem;
-        }
-
-        .contact-text h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-text p, .contact-text a {
-            color: var(--gray);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-text a:hover {
-            color: var(--primary);
-        }
-
-        .contact-form {
-            background-color: #f5f5f7;
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 8rem 5%;
-            text-align: center;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--light);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-            animation: pulse 8s infinite linear;
-            z-index: 0;
-        }
-
-        @keyframes pulse {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .cta-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.9;
-        }
-
-        .cta-button.white {
-            background-color: var(--light);
-            color: var(--primary);
-        }
-
-        .cta-button.white:hover {
-            background-color: #f0f0f0;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: var(--light);
-            padding: 5rem 5% 2rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--light);
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-column ul li a {
-            color: var(--gray);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-column ul li a:hover {
-            color: var(--light);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            color: var(--light);
-            background-color: rgba(255, 255, 255, 0.1);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 150px;
-                height: auto;
+ // Efecto de partículas
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const particles = [];
+        const colors = ['#0071e3', '#34c759', 'rgba(255,255,255,0.8)'];
+        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 3 + 1;
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+                this.speedX = Math.random() * 1 - 0.5;
+                this.speedY = Math.random() * 1 - 0.5;
+                this.opacity = Math.random() * 0.6 + 0.2;
             }
-
-            .hero-content {
-                padding-right: 0;
-                margin-bottom: 3rem;
+            
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                
+                if (this.x > canvas.width || this.x < 0) {
+                    this.speedX = -this.speedX;
+                }
+                
+                if (this.y > canvas.height || this.y < 0) {
+                    this.speedY = -this.speedY;
+                }
             }
-
-            .hero p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .steps {
-                flex-direction: column;
-            }
-
-            .step:not(:last-child)::after {
-                top: 100%;
-                left: 50%;
-                width: 2px;
-                height: 50px;
-                transform: translateX(-50%);
+            
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = this.opacity;
+                ctx.fill();
+                ctx.globalAlpha = 1;
             }
         }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 1.5rem 5%;
-            }
-
-            .logo {
-                font-size: 1.5rem;
-            }
-
-            nav ul li {
-                margin-left: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .cta-section h2 {
-                font-size: 2rem;
+        
+        function init() {
+            for (let i = 0; i < 100; i++) {
+                particles.push(new Particle());
             }
         }
-
-        @media (max-width: 576px) {
-            nav {
-                display: none;
+        
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
             }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .service-card {
-                padding: 1.5rem;
-            }
-
-            .pricing-card {
-                padding: 1.5rem;
-            }
+            
+            requestAnimationFrame(animate);
         }
+        
+        init();
+        animate();
+        
+        window.addEventListener('resize', function() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Form submission
+        function submitForm(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const model = document.getElementById('model').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would normally send the data to a server
+            // For this example, we'll just show an alert
+            alert(`Gracias ${name}, hemos recibido tu solicitud para liberar tu ${model}. Nos pondremos en contacto contigo pronto en ${email}.`);
+            
+            // Reset form
+            document.getElementById('contact-form').reset();
+            
+            // Scroll to top
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+
+document.getElementById('contact').addEventListener('submit', function(e) {
+    e.preventDefault();
+  const nombre = document.getElementById('name').value;
+  const imei = document.getElementById('imei').value;
+  const servicio = document.getElementById('servicio').value;
+  const mensajeX = document.getElementById('message').value;
+  
+  
+  let mensaje = `Nombre: ${nombre}\n`;
+  mensaje += `IMEI: ${imei}\n`;
+  mensaje += `Servicio: ${servicio}\n`;
+  mensaje += `Mensaje: ${mensajeX}`;  
+  
+  
+  // Mostrar mensaje en un modal más elegante
+    const modal = document.createElement('div');
+modal.style.position = 'fixed';
+modal.style.top = '0';
+modal.style.left = '0';
+modal.style.width = '100%';
+modal.style.height = '100%';
+modal.style.backgroundColor = 'rgba(0,0,0,0.5)';
+modal.style.display = 'flex';
+modal.style.justifyContent = 'center';
+modal.style.alignItems = 'center';
+modal.style.zIndex = '1000';
+
+const modalContent = document.createElement('div');
+modalContent.style.backgroundColor = '#ffffff'; // Fondo blanco como en la página principal
+modalContent.style.padding = '30px';
+modalContent.style.borderRadius = '12px'; // Radio de borde aumentado para coincidir
+modalContent.style.maxWidth = '500px';
+modalContent.style.textAlign = 'center';
+modalContent.style.boxShadow = '0 5px 15px rgba(0, 113, 227, 0.3)'; // Sombra con color primario
+modalContent.style.border = '1px solid rgba(0, 113, 227, 0.1)'; // Borde sutil
+
+const modalTitle = document.createElement('h2');
+modalTitle.textContent = '¡Envía tú petición!';
+modalTitle.style.color = '#0071e3'; // Color primario azul de la página
+modalTitle.style.fontFamily = "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"; // Fuente consistente
+modalTitle.style.marginTop = '0';
+modalTitle.style.fontSize = '24px';
+modalTitle.style.fontWeight = '600';
+modalTitle.style.marginBottom = '20px';
+
+const modalText = document.createElement('p');
+modalText.textContent = mensaje;
+modalText.style.lineHeight = '1.6';
+modalText.style.marginBottom = '25px';
+modalText.style.color = '#1d1d1f'; // Color de texto principal de la página
+modalText.style.fontSize = '16px';
+
+const closeButton = document.createElement('button');
+closeButton.textContent = 'Cerrar';
+closeButton.style.background = '#1d1d1f'; // Color secundario oscuro de la página
+closeButton.style.border = 'none';
+closeButton.style.color = 'white';
+closeButton.style.padding = '12px 25px'; // Similar a otros botones de la página
+closeButton.style.borderRadius = '30px'; // Radio de borde consistente
+closeButton.style.cursor = 'pointer';
+closeButton.style.fontFamily = "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif";
+closeButton.style.fontWeight = '500';
+closeButton.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+closeButton.style.transition = 'all 0.3s'; // Transición suave como en la página
+closeButton.addEventListener('mouseover', function() {
+    this.style.background = '#000000'; // Efecto hover oscuro
+    this.style.transform = 'translateY(-2px)';
+});
+closeButton.addEventListener('mouseout', function() {
+    this.style.background = '#1d1d1f';
+    this.style.transform = 'translateY(0)';
+});
+closeButton.addEventListener('click', function() {
+    document.body.removeChild(modal);
+    document.getElementById('confirmacionForm').reset();
+});
+
+modalContent.appendChild(modalTitle);
+modalContent.appendChild(modalText);
+
+const whatsappButton = document.createElement('a');
+const whatsappMensaje = encodeURIComponent(mensaje);
+whatsappButton.href = `https://wa.me/526351062284?text=${whatsappMensaje}`;
+whatsappButton.target = '_blank';
+whatsappButton.textContent = 'Enviar por WhatsApp';
+whatsappButton.style.display = 'inline-block';
+whatsappButton.style.marginRight = '15px';
+whatsappButton.style.marginBottom = '15px';
+whatsappButton.style.background = '#25D366'; // Color WhatsApp (se mantiene)
+whatsappButton.style.border = 'none';
+whatsappButton.style.color = 'white';
+whatsappButton.style.padding = '12px 25px'; // Consistente con otros botones
+whatsappButton.style.borderRadius = '30px'; // Radio de borde consistente
+whatsappButton.style.cursor = 'pointer';
+whatsappButton.style.fontFamily = "'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif";
+whatsappButton.style.fontWeight = '500';
+whatsappButton.style.textDecoration = 'none';
+whatsappButton.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+whatsappButton.style.transition = 'all 0.3s'; // Transición suave
+whatsappButton.addEventListener('mouseover', function() {
+    this.style.transform = 'translateY(-2px)';
+    this.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.15)';
+});
+whatsappButton.addEventListener('mouseout', function() {
+    this.style.transform = 'translateY(0)';
+    this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+});
+
+// Contenedor para los botones
+const buttonContainer = document.createElement('div');
+buttonContainer.style.display = 'flex';
+buttonContainer.style.justifyContent = 'center';
+buttonContainer.style.gap = '15px';
+buttonContainer.style.flexWrap = 'wrap';
+
+buttonContainer.appendChild(whatsappButton);
+buttonContainer.appendChild(closeButton);
+
+modalContent.appendChild(buttonContainer);
+modal.appendChild(modalContent);
+document.body.appendChild(modal);
+
+modalContent.appendChild(whatsappButton);
+
+   
+    modalContent.appendChild(closeButton);
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+  });
