@@ -89,7 +89,7 @@ document.getElementById('contact').addEventListener('submit', function(e) {
   
   let mensaje = `Nombre: ${nombre}\n`;
  if (imei.trim().length > 0) { mensaje += `IMEI: ${imei}\n`;}
- if (servicio.trim().lenght > 0){ mensaje += `Servicio: ${servicio}\n`};
+  mensaje += `Servicio: ${servicio}\n`;
  if (mensaje.trim().lenght > 0){ mensaje += `Mensaje: ${mensajeX}`;} 
   
   
