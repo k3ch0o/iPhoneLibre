@@ -650,3 +650,45 @@
                 padding: 1.5rem;
             }
         }
+/* Estilo para el select y los options */
+select {
+  padding: 10px 15px;
+  border: 2px solid #0071e3;
+  border-radius: 8px;
+  background-color: white;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  appearance: none; /* Elimina el estilo por defecto del navegador */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230071e3'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+select:focus {
+  border-color: #0071e3;
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2);
+}
+
+/* Estilo para los options */
+option {
+  padding: 10px;
+  background-color: white;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+option:hover {
+  background-color: #0071e3;
+  color: white;
+}
+
+option:checked {
+  background-color: #0071e3;
+  color: white;
+}
