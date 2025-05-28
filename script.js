@@ -88,9 +88,9 @@ document.getElementById('contact').addEventListener('submit', function(e) {
   
   
   let mensaje = `Nombre: ${nombre}\n`;
- if (imei.trim().length > 0) { mensaje += `IMEI: ${imei}\n`;}
+  mensaje += `IMEI: ${imei}\n`;
   mensaje += `Servicio: ${servicio}\n`;
- if (mensajeX.trim().lenght > 0){ mensaje += `Mensaje: ${mensajeX}`;} 
+  mensaje += `Mensaje: ${mensajeX}`;
   
   
   // Mostrar mensaje en un modal más elegante
